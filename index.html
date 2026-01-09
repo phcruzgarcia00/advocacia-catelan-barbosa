@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catelan & Barbosa Advocacia</title>
-  <!-- Carregamento das fontes do Google Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
   <style>
@@ -45,48 +45,54 @@
     #mainHeader {
       background-color: #E6E6E6;
       border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    #mainHeader .header-container {
+    .header-container {
       max-width: 1100px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      padding: 1rem 2rem;
+      padding: 1rem;
     }
 
-    #mainHeader .header-title {
-      font-size: 2rem;
+    .header-title {
+      font-size: 1.5rem;
       color: #1f1f1f;
     }
 
-    #mainHeader .header-nav ul {
+    .header-nav ul {
       display: flex;
       list-style: none;
-      gap: 2rem;
+      gap: 1.25rem;
       margin: 0;
       padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    #mainHeader .header-nav ul li a {
+    .header-nav ul li a {
       color: #0C0C0D;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
+      font-size: 0.95rem;
     }
 
-    #mainHeader .header-nav ul li a:hover {
+    .header-nav ul li a:hover {
       color: #8f8f8f;
     }
 
     /* ==========================================
-       HERO – APENAS IMAGEM DO ESCRITÓRIO
+       HERO
     ========================================== */
-    #heroSection.hero-section {
-      background: linear-gradient(135deg, #1A1B24, #1A1B24, #1A1B24);
-      padding: 3rem 2rem;
+    .hero-section {
+      background: linear-gradient(135deg, #1A1B24, #1A1B24);
+      padding: 2rem 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -100,25 +106,24 @@
     }
 
     .hero-logo img {
-      max-width: 800px;
-      width: 100%;
+      max-width: 100%;
       height: auto;
       border-radius: 0.5rem;
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
     /* ==========================================
-       ABOUT – DUAS PROFISSIONAIS COM FOTO À ESQUERDA
+       ABOUT
     ========================================== */
     .about-section {
-      padding: 5rem 2rem;
-      background: linear-gradient(135deg, #1A1B24, #1A1B24, #1A1B24);
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #1A1B24, #1A1B24);
     }
 
     .about-container {
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 3rem;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -127,7 +132,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      align-items: flex-start;
+      align-items: center;
       width: 100%;
     }
 
@@ -140,19 +145,25 @@
     }
 
     .about-image {
-      width: 200px;
+      width: 180px;
       height: auto;
       border-radius: 0.75rem;
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      margin-bottom: 1rem;
     }
 
     .about-text {
       max-width: 600px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .about-text {
+        text-align: left;
+      }
     }
 
     .about-title {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: #ffffff;
       margin-bottom: 1rem;
     }
@@ -170,7 +181,7 @@
       font-size: 0.95rem;
       margin-top: 0.8rem;
       padding: 0.3rem 0;
-      border-bottom: 1px solid ;
+      border-bottom: 1px solid;
       transition: color 0.2s ease, border-color 0.2s ease;
     }
 
@@ -180,11 +191,11 @@
     }
 
     /* ==========================================
-       SERVICES – AJUSTADO PARA UM ÚNICO ITEM CENTRALIZADO
+       SERVICES
     ========================================== */
     .services-section {
       background-color: #E6E6E6;
-      padding: 5rem 2rem;
+      padding: 3rem 1rem;
     }
 
     .services-container {
@@ -194,9 +205,9 @@
     }
 
     .services-title {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #1f1f1f;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .services-grid {
@@ -212,7 +223,7 @@
       background-color: #E6E6E6;
       border: 2px solid #1f1f1f;
       border-radius: 0.5rem;
-      padding: 2rem;
+      padding: 1.5rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       color: #0C0C0D;
       transition: transform 0.3s ease, border-color 0.3s ease;
@@ -235,7 +246,6 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      text-align: left;
     }
 
     .service-list li {
@@ -249,13 +259,13 @@
     }
 
     /* ==========================================
-       CALL TO ACTION / CONTATO
+       CONTACT
     ========================================== */
     .whatsapp-button {
       background-color: #25D366;
       color: white;
       border: none;
-      padding: 1rem 6rem;
+      padding: 1rem 4rem;
       border-radius: 999px;
       font-weight: bold;
       text-decoration: none;
@@ -263,6 +273,7 @@
       transition: background-color 0.3s ease, transform 0.2s ease;
       font-size: 1.1rem;
       font-family: 'Libre Baskerville', serif;
+      min-width: 200px;
     }
 
     .whatsapp-button:hover {
@@ -272,7 +283,7 @@
 
     .contact-section {
       background-color: #E6E6E6;
-      padding: 5rem 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
 
@@ -286,9 +297,9 @@
     }
 
     .contact-title {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #1f1f1f;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     /* ==========================================
@@ -298,12 +309,44 @@
       background-color: #E6E6E6;
       color: #0C0C0D;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
     }
 
     .footer-text {
       margin: 0;
       font-family: 'Libre Baskerville', serif;
+      font-size: 0.95rem;
+    }
+
+    /* ==========================================
+       MOBILE-FIRST ENHANCEMENTS
+    ========================================== */
+    @media (max-width: 480px) {
+      .header-title {
+        font-size: 1.3rem;
+      }
+
+      .header-nav ul {
+        gap: 1rem;
+      }
+
+      .header-nav ul li a {
+        font-size: 0.9rem;
+      }
+
+      .about-title {
+        font-size: 1.4rem;
+      }
+
+      .services-title,
+      .contact-title {
+        font-size: 1.6rem;
+      }
+
+      .whatsapp-button {
+        padding: 1rem 3rem;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -325,7 +368,7 @@
   </header>
 
   <!-- ===== HERO ===== -->
-  <section id="heroSection" class="hero-section">
+  <section class="hero-section">
     <div class="hero-container">
       <div class="hero-logo">
         <img src="logo-Photoroom.png" alt="Catelan & Barbosa Advocacia" />
@@ -333,7 +376,7 @@
     </div>
   </section>
 
-  <!-- ===== ÁREAS DE ATUAÇÃO (APENAS UMA, CENTRALIZADA) ===== -->
+  <!-- ===== ÁREAS DE ATUAÇÃO ===== -->
   <section id="services" class="services-section">
     <div class="services-container">
       <h2 class="services-title">Áreas de Atuação</h2>
@@ -357,14 +400,6 @@
     </div>
   </section>
 
-  <!-- ===== CONTATO ===== -->
-  <section id="contact" class="contact-section">
-    <div class="contact-container">
-      
-      <a href="https://wa.me/5517996815440" target="_blank" class="whatsapp-button">Fale Conosco</a>
-    </div>
-  </section>
-
   <!-- ===== SOBRE MIM ===== -->
   <section id="about" class="about-section">
     <div class="about-container">
@@ -375,8 +410,8 @@
           <h2 class="about-title">Dra. Helena Catelan</h2>
           <p class="about-paragraph">
             Advogada especializada em Direito de Família, com atuação humanizada e ética.
-Atende casos de divórcio, guarda, pensão alimentícia e inventário, buscando soluções seguras e eficazes.
-Comprometida com a proteção dos direitos e o bem-estar das famílias.
+            Atende casos de divórcio, guarda, pensão alimentícia e inventário, buscando soluções seguras e eficazes.
+            Comprometida com a proteção dos direitos e o bem-estar das famílias.
           </p>
           <a href="https://instagram.com/helenacatelanadv" target="_blank" class="instagram-simple">Clique e conheça mais sobre o trabalho da Dra. Helena</a>
         </div>
@@ -389,8 +424,8 @@ Comprometida com a proteção dos direitos e o bem-estar das famílias.
           <h2 class="about-title">Dra. Mariana Barbosa Leite</h2>
           <p class="about-paragraph">
             Advogada especializada em Direito do Consumidor e Direito Bancário, pós-graduada em Direito Civil.
-Atua há mais de 4 anos no combate às práticas abusivas de grandes empresas e instituições financeiras.
-Comprometida com a defesa dos direitos do consumidor e soluções jurídicas eficazes
+            Atua há mais de 4 anos no combate às práticas abusivas de grandes empresas e instituições financeiras.
+            Comprometida com a defesa dos direitos do consumidor e soluções jurídicas eficazes.
           </p>
           <a href="https://instagram.com/marianaleite.adv" target="_blank" class="instagram-simple">Clique e conheça mais sobre o trabalho da Dra. Mariana</a>
         </div>
